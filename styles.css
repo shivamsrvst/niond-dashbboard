@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background-color: #eff3f4;
+}
+.container{
+    display: flex;
+}
+.sidebar{
+    height: 100vh;
+    width: 13vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 20px 0 0 20px;
+    background-color: #fff;
+    padding: 18px;
+}
+
+.logo-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+.logo-content img{
+    width: 35px;
+}
+.navigation ul{
+    list-style-type: none;
+}
+.navigation ul li{
+    margin-bottom: 12px;
+    font-size: 12px;
+    padding: 6px;
+    cursor: pointer;
+}
+.navigation ul li:hover{
+    background-color: #cdf463;
+    border-radius: 8px;
+
+}
+
+.navigation ul li a{
+    text-decoration: none;
+    color: black;
+}
+.navigation ul li a i{
+    font-size: 16px;
+}
+.navigation ul li a span{
+    margin-left: 6px;
+    font-weight: 600;
+}
+
+.profile-section{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-section .profile img{
+    width: 50px;
+    height: 50px;
+    border-radius: 70px;
+}
+.profile-section .profile-info{
+    margin-top: 0.2rem;
+}
+.profile-section .profile-info h4{
+    font-size: 14px;
+    font-weight: 600;
+}
+.profile-section .profile-info p{
+    font-size: 10px;
+    color: grey;
+    font-weight: bold;
+    text-align: center;
+}
+
+.logout{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.logout span{
+    margin-left: 0.7rem;
+    font-size: 12px;
+}
+
+.main{
+    margin-left: 17vw;
+    padding: 20px;
+    width: 100%;
+}
+
+.dash-header{
+display: flex;
+justify-content: space-between;
+
+}
+.dash h2{
+   font-size: 22px;
+}
+.dash p{
+    font-size: 12px;
+    color: gray;
+}
+.user img{
+    width: 40px;
+    height: 40px;
+    border-radius: 60px;
+}
+.dash-info{
+    display: flex;
+    margin-right: 14px;
+}
+.head-icons{
+    margin-top: 8px;
+    margin-right: 16px;
+}
+.dash-info i{
+color: gray;
+font-size: 12px;
+border: 0.7px solid gray;
+padding: 8px 12px;
+border-radius: 12px;
+margin-left: 6px;
+}
+.user{
+    display: flex;
+}
+.user-info{
+    margin-left: 6px;
+}
+.user-info h3{
+    font-size: 14px;
+    font-weight: 600;
+}
+.user-info p{
+    font-size: 10px;
+    color: grey;
+    font-weight: 500;
+}
+
+/* Actual Data */
+
+.main .content{
+    margin-top: 2rem;
+    display: flex;
+}
+.cont-first-row{
+    display: flex;
+    gap: 30px;
+}
+
+.cont-first-row .stat{
+    width: 200px;
+    height: 90px;
+    background-color: rgb(160, 125, 160);
+    padding: 6px 14px;
+    border-radius: 14px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.cont-first-row .stat i{
+    font-size: 8px;
+    background-color: rgba(130, 130, 130,0.7);
+    padding: 2px 4px;
+    border-radius: 70px;
+}
+.stat h4{
+    margin-top: 14px;
+    text-align: center;
+}
+.stat p{
+    font-size: 8px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.content-second-row{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.content-second-row .sell-graph{
+    width: 438px;
+    height: auto;
+    background-color: #fff;
+    padding: 14px;
+    border-radius: 12px;
+}
+.content-second-row .sell-graph .graph-head{
+    display: flex;
+    justify-content: space-between;
+}
+.content-second-row .sell-graph .graph-head h4{
+    font-size: 18px;
+    font-weight: 600;
+}
+.btn{
+    border: none;
+    background-color: #cdf463;
+    padding: 2px 14px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.content-second-row .analysis{
+    margin-left: 24px;
+    padding: 12px;
+    border-radius: 12px;
+    height: 200px;
+    width: 256px;
+}
+.content-second-row .analysis h4{
+    font-size: 18px;
+    font-weight: 600;
+}
+.content-second-row .analysis p{
+    font-size: 10px;
+    color: grey;
+    font-weight: 500;
+}
+.content-second-row .analysis .analysis-info{
+    display: flex;
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.content-second-row .analysis .analysis-info i:first-child{
+    font-size: 10px;
+    background-color: rgba(130, 130, 130,0.7);
+    padding: 2px 4px;
+    border-radius: 70px;
+}
+.content-second-row .analysis .analysis-info p{
+    font-size: 12px;
+    font-weight: 700;
+    color: black;  
+    margin-right: 16px;  
+}
+
+.credit{
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+    gap: 6px;
+}
+.analysis .credit i{
+    font-size: 8px;
+    background-color: #a3ce2b;
+    padding: 2px 4px;
+    border-radius: 70px;
+}
+
+.content-table{
+    height: 200px;
+    width: 730px;
+    background-color: #fff;
+    padding: 14px;
+    border-radius: 12px;
+    margin-top: 25px;
+}
+
+.content-table .table-head{
+    display: flex;
+    justify-content: space-between;
+}
+.table-head h4{
+    font-size: 18px;
+    font-weight: 600;
+}
+table{
+    width: 100%;
+    margin-top: 10px;
+    border-spacing: 10px;
+}
+table thead{
+    font-size: 10px;
+    color: gray;
+    font-weight: 600;
+}
+table tbody{
+    font-size: 10px;
+    font-weight: 700;
+}
+table thead th{
+    text-align: left;
+}
+table thead th{
+    border-bottom: 1px solid gray;
+}
+.main .content-side{
+    margin-left: 30px;
+}
+.main .content-side .pro{
+    background-color: #1a5c39;
+    padding: 18px 24px;
+    border-radius: 12px;
+}
+.main .content-side .pro h2{
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 12px;
+}
+.main .content-side .meeting{
+    background-color: #fff;
+    padding: 16px 24px;
+    border-radius: 12px;
+    margin-top: 30px;
+}
+.main .content-side .meeting i{
+    font-size: 10px;
+    background-color: rgba(199, 104, 193, 0.7);
+    padding: 2px 4px;
+    border-radius: 40px;
+}
+.main .content-side .meeting h3{
+    font-size: 16px;
+}
+.main .content-side .meeting .meet-info{
+    margin-left: 22px;
+}
+.main .content-side .meeting span{
+    font-size: 6px;
+    background-color: rgba(199, 199, 199, 0.7);
+    padding: 2px 8px;
+    border-radius: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+.main .content-side .meeting .meet{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.main .content-side .meeting .meet-conduct{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+}
+.main .content-side .meeting button{
+    border: none;
+    padding: 8px 10px;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    font-size: 8px;
+    border-radius: 8px;
+    font-weight: 400;
+}
+.content-side .team-member{
+    background-color: #fff;
+    padding: 16px 24px;
+    border-radius: 12px;
+    margin-top: 30px;
+}
+.member{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(199, 199, 199, 0.7);
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-top: 8px;
+}
+.member .member-info{
+    margin-right: 12px;
+}
+.member .member-info h5{
+    font-size: 10px;
+    font-weight: 600;
+}
+.member .member-info p{
+    font-size: 6px;
+    color: grey;
+    font-weight: 500;
+}
+.member img{
+    width: 20px;
+    height: 20px;
+    border-radius: 60px;
+}
+.add-member{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    background-color: #657695;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-top: 8px;
+}
+.add-member p{
+    font-size: 10px;
+    font-weight: 500;
+}
+canvas{
+    min-height: 200px;
+}

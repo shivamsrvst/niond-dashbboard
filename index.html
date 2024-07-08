@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="script.js"></script>
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+        <div class="logo-content">
+                <img src="./assets/drib_logo.png" alt="Niond logo">
+                <h2>Niond</h2>
+        </div>
+
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-grid-fill"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Statistics</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-money-bill-transfer"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-people-fill"></i>
+                        <span>My Team</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-bar-chart-fill"></i>
+                        <span>Sell Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-gear-fill"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="profile-section">
+            <div class="profile">
+                <img src="./assets/user.jpg" alt="Profile Image" width="50px">
+            </div>
+            <div class="profile-info">
+                <h4>Nora Watson</h4>
+                <p>Sales Manager</p>
+            </div>
+        </div>
+
+        <div class="logout">
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Log Out</span> 
+        </div>
+    </aside>
+
+    <!-- Main -->
+
+    <div class="main">
+
+<!-- Header -->
+        <div class="dash-header">
+            <div class="dash">
+                <h2>Dashboard</h2>
+                <p>7th July 2024</p>
+            </div>
+            
+            <div class="dash-info">
+                <div class="head-icons">
+                    <i class="bi bi-chat-square-dots-fill"></i>
+                    <i class="bi bi-bell-fill"></i>
+                </div>
+                <div class="user">
+                    <img src="./assets/user.jpg" alt="User Img">
+                    <div class="user-info">
+                        <h3>Nora Watson</h3>
+                        <p>Sales Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-stats">
+
+                <div class="cont-first-row">
+                    <div class="stat">
+                        <i class="bi bi-piggy-bank-fill"></i>
+                        <span style="font-size: 10px;font-weight: 600;">Total Earning</span>
+                        <h4>242.65K</h4>
+                        <p>From the running month</p>
+                    </div>
+                    <div class="stat" style="background-color: #cdc3ff;">
+                        <i class="bi bi-wallet-fill"></i>
+                        <span style="font-size: 10px;font-weight: 600;">Average Earning</span>
+                        <h4>17.347K</h4>
+                        <p>Daily Earning of this month</p>
+                    </div>
+                    <div class="stat" style="background-color: #92d1b8;">
+                        <i class="bi bi-currency-exchange"></i>
+                        <span style="font-size: 10px;font-weight: 600;">Conversation Rate</span>
+                        <h4>74.86%</h4>
+                        <p>+6.04% greater than last month</p>
+                    </div>
+                </div>
+
+                <div class="content-second-row">
+
+                    <div class="sell-graph">
+                        <div class="graph-head">
+                            <h4>Regular Sell</h4>
+                            <button class="btn">Export</button>
+                        </div>
+                        <canvas id="regularSellChart"></canvas> 
+                    </div>
+
+                    <div class="analysis">
+                    <h4>More Analysis</h4>
+                    <p>There are more to view</p>
+                    <div class="analysis-info">
+                        <i class="bi bi-piggy-bank-fill"></i>
+                        <p style="margin-right: 60px;">Store Sell Ratio</p>
+                        <i style="font-size: 12px;font-weight:bolder;" class="bi bi-chevron-right"></i>
+                    </div>
+
+                    <div class="analysis-info">
+                        <i class="bi bi-piggy-bank-fill"></i>
+                        <p style="margin-right: 60px;">Top item sold</p>
+                        <i style="font-size: 12px;font-weight:bolder;" class="bi bi-chevron-right"></i>
+                    </div>
+                    <div class="credit">
+                        <p style="color: black; font-weight: bold;">Analysis created by</p>
+                        <i class="bi bi-piggy-bank-fill"></i>
+                    </div>
+
+                    </div>
+
+                </div>
+
+                <div class="content-table">
+                    <div class="table-head">
+                        <h4>Top Store</h4>
+                        <button class="btn">Share</button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Store Name</th>
+                                <th>Location</th>
+                                <th>Sell</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lionel Messi</td>
+                                <td>Miami,Florida</td>
+                                <td>246 Quantity</td>
+                                <td>56.80K</td>
+                            </tr>
+                            <tr>
+                                <td>Kylian Mbappe</td>
+                                <td>Madrid,Spain</td>
+                                <td>131 Quantity</td>
+                                <td>32.40K</td>
+                            </tr>
+                            <tr>
+                                <td>Florian Wirtz</td>
+                                <td>Leverkusen,Germany</td>
+                                <td>120 Quantity</td>
+                                <td>26.21K</td>
+                            </tr>
+                            <tr>
+                                <td>Lamine Yamal</td>
+                                <td>Barcelona,Spain</td>
+                                <td>106 Quantity</td>
+                                <td>18.10K</td>
+                            </tr>
+                            <tr>
+                                <td>Lamine Yamal</td>
+                                <td>Barcelona,Spain</td>
+                                <td>106 Quantity</td>
+                                <td>18.10K</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </div>
+
+            <div class="content-side">
+                <div class="pro">
+                    <h2>Upgrade to Pro</h2>
+
+                    <span style="color: white;font-size: 20px;font-weight: 500;">$4.20</span><span style="font-size: 10px;color: white;"> / Month</span>
+                    <p style="font-size: 10px;color: white;">$50 Billed Annualy</p>
+
+                    <button class="btn" style="padding: 6px 10px;margin-top: 18px;">Upgrade Now</button>
+
+                </div>
+                <div class="meeting">
+                    <div class="meet">
+                        <i class="bi bi-piggy-bank-fill"></i>
+                        <h3>Daily Meeting</h3>
+                    </div>
+                    <div class="meet-info">
+                        <span>12+ Person</span>
+                        <span>8.30 Pm</span>
+                    </div>
+                    <div class="meet-conduct">
+                    <i class="bi bi-piggy-bank-fill"></i>
+                    <pre style="font-size: 8px;font-weight: 700;">They Will Conduct 
+the meeting</pre>    
+                    </div>
+                    <button>Click for meeting link</button>
+                </div>
+
+                <div class="team-member">
+                    <h3 style="font-size: 16px;font-weight: 600;">Team Member</h3>
+                    <div class="member">
+                        <img src="./assets/user.jpg" alt="User Img">
+                        <div class="member-info">
+                            <h5>Nora Watson</h5>
+                            <p>Sales Manager</p>
+                        </div>
+                        <i style="font-size: 12px;font-weight:bolder;" class="bi bi-chevron-right"></i>
+                    </div>
+                    <div class="member">
+                        <img src="./assets/user.jpg" alt="User Img">
+                        <div class="member-info">
+                            <h5>Nora Watson</h5>
+                            <p>Sales Manager</p>
+                        </div>
+                        <i style="font-size: 12px;font-weight:bolder;" class="bi bi-chevron-right"></i>
+                    </div>
+                    <div class="member">
+                        <img src="./assets/user.jpg" alt="User Img">
+                        <div class="member-info">
+                            <h5>Nora Watson</h5>
+                            <p>Sales Manager</p>
+                        </div>
+                        <i style="font-size: 12px;font-weight:bolder;" class="bi bi-chevron-right"></i>
+                    </div>
+                    <div class="member">
+                        <img src="./assets/user.jpg" alt="User Img">
+                        <div class="member-info">
+                            <h5>Nora Watson</h5>
+                            <p>Sales Manager</p>
+                        </div>
+                        <i style="font-size: 12px;font-weight:bolder;" class="bi bi-chevron-right"></i>
+                    </div>
+                    <div class="add-member">
+                        <i style="color: white;" class="bi bi-plus-circle-fill"></i>
+                        <p>Add more member</p>
+                    </div>
+                </div>
+
+            </div>
+                
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
